@@ -1,9 +1,16 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
-<head>
-  <title th:text="${titulo}"></title>
-</head>
-<body>
-  <h1 th:text="${saludo}"></h1>
-</body>
+  <head>
+    <title th:text="${titulo}"></title>
+  </head>
+  <body>
+    <h1 th:text="${saludo}"></h1>
+    <div th:if="${booleano}">Contenido del div</div>
+    <div>
+      Mis series Favoritas:
+      <ul th:each="serie : ${series}">
+        <li th:text="${serie}"></li>
+      </ul>
+    </div>
+  </body>
 </html>
