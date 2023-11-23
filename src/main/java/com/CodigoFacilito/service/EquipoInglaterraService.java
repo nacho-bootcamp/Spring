@@ -8,7 +8,7 @@ import org.springframework.stereotype.Service;
 import com.CodigoFacilito.models.Equipo;
 import com.CodigoFacilito.models.Jugador;
 
-@Service
+@Service("E.Inglaterra")
 @Primary
 public class EquipoInglaterraService implements IService {
 

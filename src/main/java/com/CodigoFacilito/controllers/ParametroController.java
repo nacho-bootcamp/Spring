@@ -2,6 +2,7 @@ package com.CodigoFacilito.controllers;
 
 import java.util.Optional;
 
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -21,12 +22,9 @@ public class ParametroController {
 
   private IService equipoService;
 
-  public ParametroController(IService equipoService){
+  public ParametroController(@Qualifier("E.España") IService equipoService) {
     this.equipoService = equipoService;
   }
-
-  
-
 
   @GetMapping("/parametros")
   public String parametros(@RequestParam(defaultValue = "") String valor,

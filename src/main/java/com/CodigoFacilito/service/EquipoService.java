@@ -7,7 +7,7 @@ import org.springframework.stereotype.Service;
 import com.CodigoFacilito.models.Equipo;
 import com.CodigoFacilito.models.Jugador;
 
-@Service
+@Service("E.España")
 public class EquipoService implements IService {
   public List<Equipo> getTodos() {
     Equipo barcelona = new Equipo();
